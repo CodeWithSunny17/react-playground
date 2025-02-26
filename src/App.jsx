@@ -1,9 +1,12 @@
 import "./App.css";
+import Sample from "./Sample";
 
 function App() {
   return (
     <>
-      <div className="text-center">Hello</div>
+      <div className="text-center">
+        <Sample />
+      </div>
     </>
   );
 }
