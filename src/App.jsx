@@ -47,7 +47,7 @@ export default function App() {
         );
 
         setResults(resultsWithKarma);
-        setTotalPages(data.nbPages);
+        
       }
     } catch (err) {
       setError("Error fetching data. Try again.");
