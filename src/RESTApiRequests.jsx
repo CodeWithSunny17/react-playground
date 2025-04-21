@@ -59,8 +59,11 @@ export default function RESTApiRequests() {
         placeholder="name"
         value={name}
         onChange={(e) => setaName(e.target.value)}
+        className="bg-amber-100 p-1 rounded-lg"
       />
-      <button onClick={postData}>post data</button>
+      <button onClick={postData} className="bg-gray-400 rounded-lg m-2 p-1">
+        post data
+      </button>
       <br />
       <br />
       get request data is here:
@@ -70,13 +73,13 @@ export default function RESTApiRequests() {
               <div key={item.id}>
                 {item.name} {item.age}
                 <button
-                  className="bg-gray-400 rounded-lg m-2"
+                  className="bg-gray-400 rounded-lg m-2 p-1"
                   onClick={() => updateData(item.id)}
                 >
                   update
                 </button>
                 <button
-                  className="bg-gray-400 rounded-lg m-2"
+                  className="bg-gray-400 rounded-lg m-2 p-1"
                   onClick={() => deleteData(item.id)}
                 >
                   delete
