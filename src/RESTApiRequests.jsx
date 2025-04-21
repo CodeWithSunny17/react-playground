@@ -2,44 +2,90 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function RESTApiRequests() {
+  const [name, setaName] = useState("");
   const [data, setData] = useState([]);
 
   const postData = () => {
     axios
       .post("https://6805fbbaca467c15be6aae15.mockapi.io/users", {
-        name: "sunny",
+        name: name,
         age: 25,
         hobbies: ["basketball", "chess", "coding"],
       })
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        getData();
+      })
       .catch((error) => console.log(error));
   };
 
-  useEffect(() => {
+  const getData = () => {
     axios
       .get("https://6805fbbaca467c15be6aae15.mockapi.io/users")
       .then((res) => setData(res.data))
       .catch((error) => console.log(error));
+  };
+  useEffect(() => {
+    getData();
   }, []);
+
+  const updateData = (id) => {
+    axios
+      .put(`https://6805fbbaca467c15be6aae15.mockapi.io/users/${id}`, {
+        name: name,
+        age: 25,
+        hobbies: ["basketball", "chess", "coding"],
+      })
+      .then((res) => {
+        setData(res.data);
+        getData();
+      })
+      .catch((error) => console.log(error));
+  };
+  const deleteData = (id) => {
+    axios
+      .delete(`https://6805fbbaca467c15be6aae15.mockapi.io/users/${id}`)
+      .then((res) => {
+        setData(res.data);
+        getData();
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
+      <input
+        type="text"
+        placeholder="name"
+        value={name}
+        onChange={(e) => setaName(e.target.value)}
+      />
       <button onClick={postData}>post data</button>
       <br />
       <br />
       get request data is here:
-      {data.map((item, i) => {
-        return (
-          <div>
-            {item.name}+{item.age}
-            <p>
-              {item.hobbies.map((hobby) => {
-                return <p>{hobby}</p>;
-              })}
-            </p>
-            <br />
-          </div>
-        );
-      })}
+      {data
+        ? data.map((item) => {
+            return (
+              <div key={item.id}>
+                {item.name} {item.age}
+                <button
+                  className="bg-gray-400 rounded-lg m-2"
+                  onClick={() => updateData(item.id)}
+                >
+                  update
+                </button>
+                <button
+                  className="bg-gray-400 rounded-lg m-2"
+                  onClick={() => deleteData(item.id)}
+                >
+                  delete
+                </button>
+                <br />
+              </div>
+            );
+          })
+        : "loading..."}
     </div>
   );
 }
