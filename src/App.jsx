@@ -5,6 +5,7 @@ import FormDynamicInput from "./FormDynamicInput";
 import UncontrolledComponentExample from "./UncontrolledComponentExample";
 import InnerHTMLInReact from "./InnerHTMLInReact";
 import RESTApiRequests from "./RESTApiRequests";
+import Debouncing from "./Debouncing";
 export default function App() {
   return (
     <div>
@@ -13,7 +14,8 @@ export default function App() {
       {/* <FormDynamicInput /> */}
       {/* <UncontrolledComponentExample /> */}
       {/* <InnerHTMLInReact /> */}
-      <RESTApiRequests />
+      {/* <RESTApiRequests /> */}
+      <Debouncing />
     </div>
   );
 }
