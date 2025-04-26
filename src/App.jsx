@@ -8,6 +8,7 @@ import RESTApiRequests from "./RESTApiRequests";
 import Debouncing from "./Debouncing";
 import Home from "./ContextAPI/Home";
 import HOCApp from "./HigherOrderComponent/HOCApp";
+import LazyLoadComponent from "./LazyLoading/LazyLoadComponent";
 
 export default function App() {
   return (
@@ -20,7 +21,8 @@ export default function App() {
       {/* <RESTApiRequests /> */}
       {/* <Debouncing /> */}
       {/* <Home /> */}
-      <HOCApp />
+      {/* <HOCApp /> */}
+      <LazyLoadComponent />
     </div>
   );
 }
