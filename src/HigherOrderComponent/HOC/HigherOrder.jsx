@@ -26,6 +26,7 @@ export default function HigherOrder(title, Component) {
       <div>
         <h1>{title}</h1>
         <Component dataArr={dataArr} />
+        <br />
       </div>
     );
   };
