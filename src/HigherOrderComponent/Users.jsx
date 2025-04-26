@@ -11,5 +11,5 @@ function Users({ dataArr }) {
   );
 }
 
-const usersComp = HigherOrder("users", Users);
+const usersComp = HigherOrder("Users", "users", Users); //3 arguments are (title, API request endpoint, Component)
 export default usersComp;

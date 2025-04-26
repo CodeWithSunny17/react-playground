@@ -11,5 +11,5 @@ function Posts({ dataArr }) {
   );
 }
 
-const postsComp = HigherOrder("posts", Posts);
+const postsComp = HigherOrder("Posts", "posts", Posts); //3 arguments are (title, API request endpoint, Component)
 export default postsComp;
