@@ -6,6 +6,9 @@ import UncontrolledComponentExample from "./UncontrolledComponentExample";
 import InnerHTMLInReact from "./InnerHTMLInReact";
 import RESTApiRequests from "./RESTApiRequests";
 import Debouncing from "./Debouncing";
+import Home from "./ContextAPI/Home";
+import HOCApp from "./HigherOrderComponent/HOCApp";
+
 export default function App() {
   return (
     <div>
@@ -15,7 +18,9 @@ export default function App() {
       {/* <UncontrolledComponentExample /> */}
       {/* <InnerHTMLInReact /> */}
       {/* <RESTApiRequests /> */}
-      <Debouncing />
+      {/* <Debouncing /> */}
+      {/* <Home /> */}
+      <HOCApp />
     </div>
   );
 }
