@@ -9,6 +9,7 @@ import Debouncing from "./Debouncing";
 import Home from "./ContextAPI/Home";
 import HOCApp from "./HigherOrderComponent/HOCApp";
 import LazyLoadComponent from "./LazyLoading/LazyLoadComponent";
+import HelperFunApp from "./HelperFunction/HelperFunApp";
 
 export default function App() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
       {/* <Debouncing /> */}
       {/* <Home /> */}
       {/* <HOCApp /> */}
-      <LazyLoadComponent />
+      {/* <LazyLoadComponent /> */}
+      <HelperFunApp />
     </div>
   );
 }
