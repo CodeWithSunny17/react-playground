@@ -12,6 +12,7 @@ import LazyLoadComponent from "./LazyLoading/LazyLoadComponent";
 import HelperFunApp from "./HelperFunction/HelperFunApp";
 import RecursionApp from "./RecursionExample/RecursionApp";
 import CustomHooksApp from "./CustomHooks/CustomHooksApp";
+import SearchFilterData from "./SearchFilterData";
 
 export default function App() {
   return (
@@ -28,7 +29,8 @@ export default function App() {
       {/* <LazyLoadComponent /> */}
       {/* <HelperFunApp /> */}
       {/* <RecursionApp /> */}
-      <CustomHooksApp />
+      {/* <CustomHooksApp /> */}
+      <SearchFilterData />
     </div>
   );
 }

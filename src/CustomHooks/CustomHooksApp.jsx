@@ -10,7 +10,6 @@ export default function CustomHooksApp() {
         return <li key={index}>{item.name}</li>;
       })}
       <br />
-      <br />
       <h1>posts</h1>
       {posts.map((item, index) => {
         return <li key={index}>{item.title}</li>;
