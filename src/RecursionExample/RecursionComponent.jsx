@@ -5,7 +5,7 @@ export default function RecursionComponent({ data }) {
   return (
     <ul>
       {data.map((item) => (
-        <RecursionItem data={item} />
+        <RecursionItem key={item.id} data={item} />
       ))}
     </ul>
   );
