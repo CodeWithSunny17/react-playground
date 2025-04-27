@@ -48,8 +48,9 @@ export default function SearchFilterData() {
         }}
       />
       <h1>Users</h1>
-      {filteredUsers &&
-        filteredUsers.map((user, index) => <div key={index}>{user.name}</div>)}
+      {filteredUsers && search.length > 0
+        ? filteredUsers.map((user, index) => <div key={index}>{user.name}</div>)
+        : users.map((user, index) => <div key={index}>{user.name}</div>)}
     </div>
   );
 }
