@@ -10,6 +10,7 @@ import Home from "./ContextAPI/Home";
 import HOCApp from "./HigherOrderComponent/HOCApp";
 import LazyLoadComponent from "./LazyLoading/LazyLoadComponent";
 import HelperFunApp from "./HelperFunction/HelperFunApp";
+import RecursionApp from "./RecursionExample/RecursionApp";
 
 export default function App() {
   return (
@@ -24,7 +25,8 @@ export default function App() {
       {/* <Home /> */}
       {/* <HOCApp /> */}
       {/* <LazyLoadComponent /> */}
-      <HelperFunApp />
+      {/* <HelperFunApp /> */}
+      <RecursionApp />
     </div>
   );
 }
